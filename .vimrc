@@ -71,6 +71,7 @@ hi clear CursorLine " 行番号のみハイライト
 autocmd BufWritePre * :%s/\s\+$//ge " 保存時に行末の空白を削除
 
 nnoremap <silent><C-e> :NERDTreeToggle<CR>
+let NERDTreeShowHidden=1 " dotfileを表示
 
 " unite.vimの設定
 noremap <C-u><C-f> :Unite -buffer-name=file file<CR> " ファイル一覧

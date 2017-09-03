@@ -1,0 +1,19 @@
+#! /bin/bash
+
+# Homebrew
+if ! which brew > /dev/null; then
+  ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+  brew update
+  brew install coreutils
+fi
+
+# Ruby
+if ! which rbenv > /dev/null; then
+  brew install rbenv
+  brew install ruby-build
+fi
+
+# Utils
+if ! which jq > /dev/null; then
+  brew install jq
+fi

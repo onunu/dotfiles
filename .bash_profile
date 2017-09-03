@@ -28,5 +28,7 @@ fi
 
 alias clip='pbcopy'
 alias SS='ssh $(grep -iE "^host[[:space:]]+[^*]" ~/.ssh/config| awk "{print \$2}"| peco)'
+alias ls='ls -F --color=auto'
+alias gd='git difftool'
 
 source ~/.bashrc
