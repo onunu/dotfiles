@@ -17,3 +17,9 @@ fi
 if ! which jq > /dev/null; then
   brew install jq
 fi
+if ! which tree > /dev/null; then
+  brew install tree
+fi
+if ! which peco > /dev/null; then
+  brew install peco
+fi

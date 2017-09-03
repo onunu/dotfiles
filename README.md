@@ -12,3 +12,8 @@ $ git submodule update
 ```
 $ bin/dotfiles
 ```
+
+### Install util commands
+```
+$ bin/utils
+```
