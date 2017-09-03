@@ -23,3 +23,6 @@ fi
 if ! which peco > /dev/null; then
   brew install peco
 fi
+if ! which pwgen > /dev/null; then
+  brew install pwgen
+fi
