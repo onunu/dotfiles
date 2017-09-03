@@ -32,6 +32,8 @@ NeoBundleCheck
 " ******************
 " Customize
 " ******************
+autocmd ColorScheme * highlight Normal ctermbg=none
+autocmd ColorScheme * highlight LineNr ctermbg=none
 let g:solarized_termcolors=256
 syntax enable
 set background=dark
