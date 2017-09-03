@@ -1,6 +1,13 @@
 [core]
 	excludesfile = ~/.gitignore_global
-
 [user]
 	name = onunu
 	email = onunu@zeals.co.jp
+[diff]
+	tool = vimdiff
+[difftool]
+	prompt = false
+[merge]
+	tool = vimdiff
+[mergetool]
+	prompt = false
