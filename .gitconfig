@@ -1,0 +1,6 @@
+[core]
+	excludesfile = ~/.gitignore_global
+
+[user]
+	name = onunu
+	email = onunu@zeals.co.jp
