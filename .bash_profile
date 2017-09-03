@@ -1,5 +1,5 @@
 # git-completion
-source /usr/local/etc/bash_completion.d/.git-completion.bash
+source /usr/local/etc/bash_completion.d/git-completion.bash
 
 # coreutils
 export PATH=$(brew --prefix coreutils)/libexec/gnubin:$PATH
