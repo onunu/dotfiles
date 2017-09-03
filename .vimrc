@@ -7,7 +7,8 @@ if has('vim_starting')
 
     " Required:
     set runtimepath+=~/dotfiles/.vim/bundle/neobundle.vim/
-    call neobundle#rc(expand('~/dotfiles/.vim/bundle/'))
+    call neobundle#begin(expand('~/dotfiles/.vim/bundle/'))
+    call neobundle#end()
 endif
 " Required:
 call neobundle#begin(expand('~/dotfiles/.vim/bundle'))
