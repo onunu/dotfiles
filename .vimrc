@@ -66,6 +66,7 @@ set backupdir=/tmp " バックアップファイルのパス
 set scrolloff=5 " スクロール時に余裕を持たせる
 set cursorline " 現在の行をハイライト
 set wildmenu wildmode=list:full
+set clipboard=unnamed,autoselect " ヤンクをクリップボードにコピー
 hi clear CursorLine " 行番号のみハイライト
 
 autocmd BufWritePre * :%s/\s\+$//ge " 保存時に行末の空白を削除
