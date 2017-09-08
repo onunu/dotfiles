@@ -26,3 +26,6 @@ fi
 if ! which pwgen > /dev/null; then
   brew install pwgen
 fi
+if ! which tig > /dev/null; then
+  brew install tig
+fi
