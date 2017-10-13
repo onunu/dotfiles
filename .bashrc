@@ -1,5 +1,6 @@
 export TERM=xterm-256color
 export PATH=~/.local/bin/:$PATH
+export PATH="$HOME/bin:$PATH"
 
 function parse_git_branch {
     git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ [\1]/'
