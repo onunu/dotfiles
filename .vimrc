@@ -23,6 +23,7 @@ NeoBundle 'altercation/vim-colors-solarized'
 NeoBundle 'szw/vim-tags'
 NeoBundle "ctrlpvim/ctrlp.vim"
 NeoBundle 'elixir-lang/vim-elixir'
+NeoBundle 'TwitVim'
 call neobundle#end()
 " 拡張子によって設定を変える場合
 filetype plugin indent on
@@ -71,6 +72,10 @@ hi clear CursorLine " 行番号のみハイライト
 
 autocmd BufWritePre * :%s/\s\+$//ge " 保存時に行末の空白を削除
 
+autocmd BufRead,BufNewFile *.yml.liquid set filetype=yaml " yaml.liquidはyamlでシンタックスハイライトする
+autocmd BufRead,BufNewFile *.dig set filetype=yaml " digもyamlでシンタックスハイライトする
+autocmd BufRead,BufNewFile *.hql set filetype=sql " hqlもsqlでシンタックスハイライトする
+
 nnoremap <silent><C-e> :NERDTreeToggle<CR>
 let NERDTreeShowHidden=1 " dotfileを表示
 
@@ -90,3 +95,9 @@ au BufNewFile,BufRead *.php let g:vim_tags_project_tags_command = "ctags --langu
 " tagsジャンプの時に複数ある時は一覧表示
 nnoremap <C-]> g<C-]>
 autocmd BufRead,BufNewFile *.py setfiletype python
+
+
+" twitvim settings
+let twitvim_browser_cmd = 'open' " for Mac
+let twitvim_force_ssl = 1
+let twitvim_count = 60
