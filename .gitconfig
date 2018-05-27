@@ -2,7 +2,7 @@
 	excludesfile = ~/.gitignore_global
 [user]
 	name = onunu
-	email = onunu@zeals.co.jp
+	email = riku.onuma@livesense.co.jp
 [diff]
 	tool = vimdiff
 [difftool]

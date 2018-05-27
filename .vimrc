@@ -90,3 +90,6 @@ au BufNewFile,BufRead *.php let g:vim_tags_project_tags_command = "ctags --langu
 " tagsジャンプの時に複数ある時は一覧表示
 nnoremap <C-]> g<C-]>
 autocmd BufRead,BufNewFile *.py setfiletype python
+autocmd BufRead,BufNewFile *.java setfiletype java
+autocmd BufRead,BufNewFile *.dig setfiletype yaml
+autocmd BufRead,BufNewFile *.yml.liquid setfiletype yaml
