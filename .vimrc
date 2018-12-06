@@ -23,7 +23,8 @@ NeoBundle 'altercation/vim-colors-solarized'
 NeoBundle 'szw/vim-tags'
 NeoBundle "ctrlpvim/ctrlp.vim"
 NeoBundle 'elixir-lang/vim-elixir'
-NeoBundle 'TwitVim'
+NeoBundle 'jeetsukumaran/vim-nefertiti'
+NeoBundle 'mechatroner/rainbow_csv'
 call neobundle#end()
 " 拡張子によって設定を変える場合
 filetype plugin indent on
@@ -39,6 +40,7 @@ let g:solarized_termcolors=256
 syntax enable
 set background=dark
 colorscheme solarized
+"colorscheme nefertiti
 set backspace=indent,eol,start " insertモード時にbackspaceを有効にする
 set laststatus=2 " ステータスラインを下部に表示
 set title " 下部バーにタイトルを表示
@@ -75,6 +77,8 @@ autocmd BufWritePre * :%s/\s\+$//ge " 保存時に行末の空白を削除
 autocmd BufRead,BufNewFile *.yml.liquid set filetype=yaml " yaml.liquidはyamlでシンタックスハイライトする
 autocmd BufRead,BufNewFile *.dig set filetype=yaml " digもyamlでシンタックスハイライトする
 autocmd BufRead,BufNewFile *.hql set filetype=sql " hqlもsqlでシンタックスハイライトする
+autocmd BufRead,BufNewFile *.py setfiletype python
+autocmd BufRead,BufNewFile *.java setfiletype java
 
 nnoremap <silent><C-e> :NERDTreeToggle<CR>
 let NERDTreeShowHidden=1 " dotfileを表示
@@ -94,7 +98,6 @@ au FileType unite inoremap <silent> <buffer> <ESC><ESC> <ESC>q
 au BufNewFile,BufRead *.php let g:vim_tags_project_tags_command = "ctags --languages=php -f ~/php.tags `pwd` 2>/dev/null &"
 " tagsジャンプの時に複数ある時は一覧表示
 nnoremap <C-]> g<C-]>
-autocmd BufRead,BufNewFile *.py setfiletype python
 
 
 " twitvim settings

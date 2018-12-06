@@ -21,9 +21,9 @@ if which pyenv > /dev/null; then
 fi
 
 # nodejs
-if which nodenv > /dev/null; then
-  export PATH="$HOME/.nodenv/bin:$PATH"
-  eval "$(nodenv init -)"
+if which ndenv > /dev/null; then
+  export PATH="$HOME/.ndenv/bin:$PATH"
+  eval "$(ndenv init -)"
 fi
 
 alias clip='pbcopy'
@@ -33,3 +33,6 @@ alias gd='git difftool'
 
 source ~/.bashrc
 export PATH="/usr/local/opt/postgresql@9.5/bin:$PATH"
+export PGHOST="hero-dev.cn8mep7dlcam.ap-northeast-1.rds.amazonaws.com"
+export PGUSER="postgres"
+export PGDATABASE="ieshil_staging"
