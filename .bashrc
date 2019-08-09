@@ -19,4 +19,4 @@ function promps {
     PS1="${TITLEBAR}${GREEN}onunu${WHITE}:${BLUE}\W${GREEN}\$(parse_git_branch)${BLUE}ᛤ${WHITE} "
 }
 promps
-export PATH=$HOME/.nodebrew/current/bin:$PATH
+# export PATH=$HOME/.nodebrew/current/bin:$PATH

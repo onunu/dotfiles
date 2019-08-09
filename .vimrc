@@ -69,7 +69,7 @@ set backupdir=/tmp " バックアップファイルのパス
 set scrolloff=5 " スクロール時に余裕を持たせる
 set cursorline " 現在の行をハイライト
 set wildmenu wildmode=list:full
-set clipboard=unnamed,autoselect " ヤンクをクリップボードにコピー
+set clipboard+=unnamed
 hi clear CursorLine " 行番号のみハイライト
 
 autocmd BufWritePre * :%s/\s\+$//ge " 保存時に行末の空白を削除
@@ -79,6 +79,7 @@ autocmd BufRead,BufNewFile *.dig set filetype=yaml " digもyamlでシンタッ�
 autocmd BufRead,BufNewFile *.hql set filetype=sql " hqlもsqlでシンタックスハイライトする
 autocmd BufRead,BufNewFile *.py setfiletype python
 autocmd BufRead,BufNewFile *.java setfiletype java
+autocmd BufRead,BufNewFile *.tsx setfiletype javascript
 
 nnoremap <silent><C-e> :NERDTreeToggle<CR>
 let NERDTreeShowHidden=1 " dotfileを表示
