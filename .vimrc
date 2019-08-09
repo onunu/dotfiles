@@ -99,9 +99,7 @@ au FileType unite inoremap <silent> <buffer> <ESC><ESC> <ESC>q
 au BufNewFile,BufRead *.php let g:vim_tags_project_tags_command = "ctags --languages=php -f ~/php.tags `pwd` 2>/dev/null &"
 " tagsジャンプの時に複数ある時は一覧表示
 nnoremap <C-]> g<C-]>
-
-
-" twitvim settings
-let twitvim_browser_cmd = 'open' " for Mac
-let twitvim_force_ssl = 1
-let twitvim_count = 60
+autocmd BufRead,BufNewFile *.py setfiletype python
+autocmd BufRead,BufNewFile *.java setfiletype java
+autocmd BufRead,BufNewFile *.dig setfiletype yaml
+autocmd BufRead,BufNewFile *.yml.liquid setfiletype yaml
