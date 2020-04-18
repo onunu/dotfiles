@@ -6,30 +6,33 @@ if has('vim_starting')
     endif
 
     " Required:
-    set runtimepath+=~/dotfiles/.vim/bundle/neobundle.vim/
-    call neobundle#begin(expand('~/dotfiles/.vim/bundle/'))
-    call neobundle#end()
+    set runtimepath+=~/.vim/dein/repos/github.com/Shougo/dein.vim
+    call dein#begin(expand('~/.vim/dein'))
+    call dein#end()
 endif
 " Required:
-call neobundle#begin(expand('~/dotfiles/.vim/bundle'))
-NeoBundleFetch 'Shougo/neobundle.vim'
-NeoBundle 'Shougo/neocomplete'
-NeoBundle 'Shougo/unite.vim'
-NeoBundle 'Shougo/neomru.vim'
-NeoBundle 'scrooloose/nerdtree'
-NeoBundle 'slim-template/vim-slim'
-NeoBundle 'Yggdroot/indentLine'
-NeoBundle 'altercation/vim-colors-solarized'
-NeoBundle 'szw/vim-tags'
-NeoBundle "ctrlpvim/ctrlp.vim"
-NeoBundle 'elixir-lang/vim-elixir'
-NeoBundle 'jeetsukumaran/vim-nefertiti'
-NeoBundle 'mechatroner/rainbow_csv'
-call neobundle#end()
+call dein#begin(expand('~/.vim/dein'))
+call dein#add('Shougo/neobundle.vim')
+call dein#add('Shougo/neocomplete')
+call dein#add('Shougo/unite.vim')
+call dein#add('Shougo/neomru.vim')
+call dein#add('scrooloose/nerdtree')
+call dein#add('slim-template/vim-slim')
+call dein#add('Yggdroot/indentLine')
+call dein#add('altercation/vim-colors-solarized')
+call dein#add('szw/vim-tags')
+call dein#add("ctrlpvim/ctrlp.vim")
+call dein#add('elixir-lang/vim-elixir')
+call dein#add('jeetsukumaran/vim-nefertiti')
+call dein#add('mechatroner/rainbow_csv')
+call dein#end()
+
+if dein#check_install()
+  call dein#install()
+endif
+
 " 拡張子によって設定を変える場合
 filetype plugin indent on
-
-NeoBundleCheck
 
 " ******************
 " Customize
